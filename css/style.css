@@ -1,0 +1,755 @@
+@import url(./navigation.css);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "functionRegular";
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/Banner\ BG.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+}
+#hero .hero-inner h1 {
+  font-size: 70px;
+  font-family: "playfairBold";
+}
+#hero .hero-inner p {
+  font-size: 25px;
+  margin: 20px 0;
+}
+#hero .hero-inner .btns button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+#hero .hero-inner .btns button:last-child {
+  margin-left: 20px;
+}
+#hero .hero-inner p:last-child {
+  font-family: "playfairSemiBold";
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+
+#arrivals {
+  width: 100%;
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+#arrivals h2 {
+  font-family: "functionRegular";
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding: 30px 0;
+}
+#arrivals .price-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  line-height: 0.65cm;
+}
+#arrivals .price-cards .prices .img img {
+  width: 100%;
+}
+#arrivals .price-cards .prices .price-text {
+  position: relative;
+}
+#arrivals .price-cards .prices .price-text h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+#arrivals .price-cards .prices .price-text p:last-child {
+  position: absolute;
+  font-family: "redhatBold";
+  right: 0;
+  top: 0;
+}
+#arrivals .catalogue {
+  text-align: center;
+  margin-top: 60px;
+}
+#arrivals .catalogue span {
+  margin: 0 10px;
+  font-size: 20px;
+}
+#arrivals .catalogue button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+
+#sellers {
+  width: 100%;
+  padding: 0 100px;
+}
+#sellers h2 {
+  font-family: "functionRegular";
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding: 30px 0;
+}
+#sellers .sellers-inner {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+#sellers .sellers-inner .sellers-cards .img {
+  width: 100%;
+}
+#sellers .sellers-inner .sellers-cards .img img {
+  width: 100%;
+}
+#sellers .sellers-inner .sellers-cards .card-text {
+  margin-top: 20px;
+  position: relative;
+}
+#sellers .sellers-inner .sellers-cards .card-text h3 {
+  font-size: 35px;
+}
+#sellers .sellers-inner .sellers-cards .card-text p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "redhatBold";
+  font-size: 30px;
+}
+
+#orders {
+  width: 100%;
+  height: 100vh;
+  padding: 0 50px;
+}
+#orders .orders-inner {
+  height: 80%;
+  overflow: scroll;
+  margin-top: 70px;
+}
+#orders .orders-inner .order-img {
+  background: url(../img/Rectangle\ 59.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+#orders .orders-inner .order-img .order-text {
+  position: absolute;
+  top: 40%;
+  line-height: 1.2cm;
+  padding-left: 30px;
+  color: #fff;
+}
+#orders .orders-inner .order-img .order-text h3 {
+  font-family: "playfairSemiBold";
+  font-size: 20px;
+}
+#orders .orders-inner .order-img .order-text p {
+  font-family: "redhatBold";
+  font-size: 40px;
+}
+#orders .orders-inner .order-img span {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+#umbro {
+  width: 100%;
+  padding: 0 100px;
+  text-align: center;
+}
+#umbro h2 {
+  font-family: "functionRegular";
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding: 30px 0;
+}
+#umbro h2 span {
+  font-family: "tempusRegular";
+  font-size: 70px;
+  vertical-align: middle;
+}
+#umbro .umbro-inner {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-align: left;
+}
+#umbro .umbro-inner .umbro-card {
+  margin-top: 30px;
+}
+#umbro .umbro-inner .umbro-card .img img {
+  width: 100%;
+}
+#umbro .umbro-inner .umbro-card .umbro-text {
+  position: relative;
+  margin-top: 20px;
+  line-height: 0.7cm;
+}
+#umbro .umbro-inner .umbro-card .umbro-text h3 {
+  font-size: 24px;
+}
+#umbro .umbro-inner .umbro-card .umbro-text p {
+  font-size: 22px;
+}
+#umbro .umbro-inner .umbro-card .umbro-text p:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: "redhatBold";
+  font-size: 27px;
+}
+#umbro button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+#watches {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  background-color: rgb(225, 225, 225);
+  padding-bottom: 50px;
+}
+#watches .img {
+  width: 100%;
+}
+#watches .img img {
+  width: 100%;
+}
+#watches .text h2 {
+  font-size: 60px;
+  margin: 25px;
+}
+#watches .text p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 0.75cm;
+}
+#watches .text button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+
+#suits {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 100px;
+}
+#suits h2 {
+  font-family: "functionRegular";
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding: 30px 0;
+}
+#suits .suits-inner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#suits .suits-inner .suit-card {
+  margin-top: 40px;
+}
+#suits .suits-inner .suit-card .img img {
+  width: 100%;
+}
+#suits .suits-inner .suit-card .suit-text {
+  position: relative;
+  margin-top: 40px;
+}
+#suits .suits-inner .suit-card .suit-text h3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 26px;
+}
+#suits .suits-inner .suit-card .suit-text p {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: "redhatBold";
+  font-size: 20px;
+}
+#suits .catalogue {
+  text-align: center;
+  margin-top: 60px;
+}
+#suits .catalogue span {
+  margin: 0 10px;
+  font-size: 20px;
+}
+#suits .catalogue button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+
+#jeans {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgb(225, 225, 225);
+  padding-bottom: 50px;
+}
+#jeans .img {
+  width: 100%;
+}
+#jeans .img img {
+  width: 100%;
+}
+#jeans .text h2 {
+  font-size: 60px;
+  margin: 25px;
+}
+#jeans .text p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 0.75cm;
+}
+#jeans .text button {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+
+#subscription {
+  width: 100%;
+  background: rgb(225, 225, 225);
+  margin-top: 60px;
+  padding: 80px 130px;
+}
+#subscription .subs-text {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+}
+#subscription .subs-text h2 {
+  font-size: 60px;
+  line-height: 1.7cm;
+}
+#subscription .subs-text p {
+  font-size: 24px;
+  line-height: 0.8cm;
+}
+#subscription form {
+  display: flex;
+  margin-top: 50px;
+  gap: 0;
+}
+#subscription form input:first-child {
+  width: 70%;
+  padding: 15px 30px;
+  font-size: 22px;
+  border-radius: 0;
+  border: none;
+  background-color: rgb(178, 178, 178);
+}
+#subscription form input:last-child {
+  border: none;
+  background: #000;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 24px;
+}
+
+footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 30px 60px;
+}
+footer .footer-inner {
+  border-top: 4px solid rgb(125, 125, 125);
+  border-bottom: 4px solid #fff;
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  padding: 40px 50px;
+}
+footer .footer-inner .footer-card {
+  width: 100%;
+  padding: 0 20px;
+}
+footer .footer-inner .footer-card h3 {
+  font-family: "playfairBold";
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+footer .footer-inner .footer-card p {
+  line-height: 0.7cm;
+  font-size: 20px;
+}
+footer .footer-inner .footer-card p a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 0.7cm;
+}
+footer .footer-inner .footer-card p a:hover {
+  text-decoration: underline;
+}
+footer h5 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  #hero {
+    height: 60vh;
+  }
+  #hero .hero-inner h1 {
+    font-size: 60px;
+  }
+  #hero .hero-inner p {
+    margin: 30px 0;
+  }
+  #hero .hero-inner p:last-child {
+    bottom: 40%;
+  }
+  #arrivals .price-cards .prices .price-text {
+    position: static;
+  }
+  #arrivals .price-cards .prices .price-text p:last-child {
+    position: static;
+    font-size: 18px;
+  }
+  #sellers .sellers-inner .sellers-cards .card-text {
+    position: static;
+  }
+  #sellers .sellers-inner .sellers-cards .card-text h3 {
+    font-size: 30px;
+  }
+  #sellers .sellers-inner .sellers-cards .card-text p {
+    position: static;
+    font-size: 27px;
+  }
+  #orders {
+    height: 40vh;
+    margin-top: 90px;
+  }
+  #umbro .umbro-inner .umbro-card .umbro-text {
+    position: static;
+  }
+  #umbro .umbro-inner .umbro-card .umbro-text p:last-child {
+    position: static;
+    font-size: 24px;
+  }
+  #suits .suits-inner .suit-card .suit-text {
+    margin-top: 20px;
+    position: static;
+  }
+  #suits .suits-inner .suit-card .suit-text h3 {
+    position: static;
+  }
+  #suits .suits-inner .suit-card .suit-text p {
+    position: static;
+    margin: 5px 0;
+  }
+  #subscription {
+    padding: 80px 70px;
+  }
+  #subscription .subs-text {
+    gap: 50px;
+  }
+  footer {
+    padding: 30px 40px;
+  }
+  footer .footer-inner {
+    gap: 5%;
+  }
+  footer .footer-inner .footer-card h3 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 765px) {
+  #hero {
+    height: 90vh;
+    padding: 0;
+    color: #fff;
+  }
+  #hero .hero-inner {
+    background: rgba(0, 0, 0, 0.469);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #hero .hero-inner .btns button {
+    margin: 20px 0;
+  }
+  #hero .hero-inner .btns button:last-child {
+    margin: 0 auto;
+  }
+  #hero .hero-inner p:last-child {
+    position: static;
+    font-size: 18px;
+  }
+  #arrivals {
+    padding: 0 30px;
+  }
+  #arrivals .price-cards {
+    flex-direction: column;
+  }
+  #arrivals .catalogue span {
+    display: none;
+  }
+  #arrivals .catalogue button {
+    width: 100%;
+  }
+  #sellers {
+    padding: 0 30px;
+  }
+  #sellers .sellers-inner {
+    flex-direction: column;
+  }
+  #orders {
+    display: none;
+  }
+  #umbro {
+    padding: 0 30px;
+    margin-top: 60px;
+  }
+  #umbro .umbro-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  #umbro button {
+    width: 100%;
+  }
+  #watches {
+    padding: 30px 10px;
+  }
+  #watches .img {
+    display: none;
+  }
+  #watches .text h2 {
+    font-size: 50px;
+  }
+  #watches .text p {
+    font-size: 22px;
+  }
+  #suits {
+    margin-top: 70px;
+  }
+  #suits .suits-inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  #suits .suits-inner .suit-card .img {
+    width: 100%;
+  }
+  #suits .catalogue span {
+    display: none;
+  }
+  #suits .catalogue button {
+    width: 100%;
+  }
+  #jeans {
+    padding: 30px 10px;
+  }
+  #jeans .img {
+    display: none;
+  }
+  #jeans .text h2 {
+    font-size: 50px;
+  }
+  #jeans .text p {
+    font-size: 22px;
+  }
+  #subscription {
+    padding: 50px 30px;
+  }
+  #subscription .subs-text {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #subscription form {
+    flex-direction: column;
+  }
+  #subscription form input:first-child {
+    width: 100%;
+    margin: 10px 0;
+  }
+  footer .footer-inner {
+    flex-direction: column;
+    padding: 30px 0;
+  }
+  footer .footer-inner .footer-card {
+    padding: 0;
+  }
+  footer .footer-inner .footer-card h3 {
+    margin: 30px 0;
+  }
+  footer h5 {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */

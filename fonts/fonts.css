@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'playfairBold';
+    src: url(./PlayfairDisplay-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'playfairRegular';
+    src: url(./PlayfairDisplay-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'playfairSemiBold';
+    src: url(./PlayfairDisplay-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'redhatBold';
+    src: url(./RedHatDisplay-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'redhatRegular';
+    src: url(./RedHatDisplay-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'redhatSemiBold';
+    src: url(./RedHatDisplay-SemiBold.ttf);
+}
+
+@font-face{
+    font-family: 'functionRegular';
+    src: url(./Function\ Regular.ttf);
+}
+
+@font-face{
+    font-family: 'tempusRegular';
+    src: url(./TEMPSITC.ttf);
+}

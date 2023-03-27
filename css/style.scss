@@ -1,0 +1,1008 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'functionRegular';
+}
+
+@import url(./navigation.css);
+
+// **************************************
+// ************* M I X I N S ****************
+// **************************************
+
+@mixin h2 {
+    font-family: 'functionRegular';
+    font-size: 50px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    padding: 30px 0;
+    // margin: 0 30px;
+}
+
+@mixin button {
+    border: none;
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 24px;
+}
+
+// **************************************
+// ************* H E R O ****************
+// **************************************
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Banner\ BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+
+    .hero-inner {
+
+        h1 {
+            font-size: 70px;
+            font-family: 'playfairBold';
+
+        }
+
+        p {
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .btns {
+            button {
+                @include button()
+            }
+
+            button:last-child {
+                margin-left: 20px;
+            }
+        }
+
+        p:last-child {
+            font-family: 'playfairSemiBold';
+            font-size: 20px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+// ***********************************************
+// ************* A R R I V  A L S ****************
+// ***********************************************
+
+#arrivals {
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0 20px;
+
+    h2 {
+        @include h2()
+    }
+
+    .price-cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 50px;
+        line-height: .65cm;
+
+        .prices {
+
+
+            .img {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .price-text {
+                position: relative;
+
+                h3 {
+                    margin-top: 20px;
+                    font-size: 24px;
+                }
+
+                p:last-child {
+                    position: absolute;
+                    font-family: 'redhatBold';
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+
+        }
+
+    }
+
+    .catalogue {
+        text-align: center;
+        margin-top: 60px;
+
+        span {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        button {
+            @include button()
+        }
+    }
+
+}
+
+// ********************************************
+// ************* S E L L E R S ****************
+// ********************************************
+
+#sellers {
+    width: 100%;
+    padding: 0 100px;
+
+    h2 {
+        @include h2()
+    }
+
+    .sellers-inner {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        .sellers-cards {
+            .img {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .card-text {
+                margin-top: 20px;
+                position: relative;
+
+                h3 {
+                    font-size: 35px;
+                }
+
+                p {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-family: 'redhatBold';
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+// ********************************************
+// ************** O R D E R S *****************
+// ********************************************
+
+#orders {
+    width: 100%;
+    height: 100vh;
+    padding: 0 50px;
+
+    .orders-inner {
+        height: 80%;
+        overflow: scroll;
+        margin-top: 70px;
+
+        .order-img {
+            background: url(../img/Rectangle\ 59.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            position: relative;
+            margin-bottom: 30px;
+
+
+            .order-text {
+                position: absolute;
+                top: 40%;
+                line-height: 1.2cm;
+                padding-left: 30px;
+                color: #fff;
+
+                h3 {
+                    font-family: 'playfairSemiBold';
+                    font-size: 20px;
+                }
+
+                p {
+                    font-family: 'redhatBold';
+                    font-size: 40px;
+                }
+            }
+
+            span {
+                position: absolute;
+                right: 5px;
+                bottom: 10px;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+
+
+}
+
+// ********************************************
+// *************** U M B R O ******************
+// ********************************************
+
+#umbro {
+    width: 100%;
+    padding: 0 100px;
+    text-align: center;
+
+    h2 {
+        font-family: 'functionRegular';
+        font-size: 50px;
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding: 30px 0;
+
+        span {
+            font-family: 'tempusRegular';
+            font-size: 70px;
+            vertical-align: middle;
+        }
+    }
+
+    .umbro-inner {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        text-align: left;
+
+        .umbro-card {
+            margin-top: 30px;
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .umbro-text {
+                position: relative;
+                margin-top: 20px;
+                line-height: .7cm;
+
+                h3 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 22px;
+                }
+
+                p:last-child {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-family: 'redhatBold';
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+
+    button {
+        border: none;
+        background: #000;
+        color: #fff;
+        padding: 12px 30px;
+        font-size: 24px;
+        margin-top: 40px;
+    }
+}
+
+// ********************************************
+// ************* W A T C H E S ****************
+// ********************************************
+
+#watches {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(225, 225, 225);
+    padding-bottom: 50px;
+
+    .img {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+
+
+        h2 {
+            font-size: 60px;
+            margin: 25px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: .75cm;
+        }
+
+        button {
+            @include button()
+        }
+
+    }
+}
+
+// ********************************************
+// *************** S U I T S ******************
+// ********************************************
+
+#suits {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 100px;
+
+    h2 {
+        @include h2()
+    }
+
+    .suits-inner {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        .suit-card {
+            margin-top: 40px;
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .suit-text {
+                position: relative;
+                margin-top: 40px;
+
+                h3 {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    font-size: 26px;
+                }
+
+                p {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    font-family: 'redhatBold';
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .catalogue {
+        text-align: center;
+        margin-top: 60px;
+
+        span {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        button {
+            @include button()
+        }
+    }
+}
+
+// ********************************************
+// *************** J E A N S ******************
+// ********************************************
+
+#jeans {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    background-color: rgb(225, 225, 225);
+    padding-bottom: 50px;
+
+    .img {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text {
+
+
+        h2 {
+            font-size: 60px;
+            margin: 25px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: .75cm;
+        }
+
+        button {
+            @include button()
+        }
+
+    }
+}
+
+// ******************************************************
+// ************* S U B S C R I P T I O N ****************
+// ******************************************************
+
+#subscription {
+    width: 100%;
+    background: rgb(225, 225, 225);
+    margin-top: 60px;
+    padding: 80px 130px;
+
+    .subs-text {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+
+        h2 {
+            font-size: 60px;
+            line-height: 1.7cm;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: .8cm;
+        }
+    }
+
+    form {
+        display: flex;
+        margin-top: 50px;
+        gap: 0;
+
+        input:first-child {
+            width: 70%;
+            padding: 15px 30px;
+            font-size: 22px;
+            border-radius: 0;
+            border: none;
+            background-color: rgb(178, 178, 178);
+        }
+
+        input:last-child {
+            @include button()
+        }
+    }
+}
+
+// ******************************************************
+// ******************* F O O T E R **********************
+// ******************************************************
+
+footer {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 30px 60px;
+
+    .footer-inner {
+        border-top: 4px solid rgb(125, 125, 125);
+        border-bottom: 4px solid #fff;
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        padding: 40px 50px;
+
+        .footer-card {
+            width: 100%;
+            padding: 0 20px;
+
+            h3 {
+                font-family: 'playfairBold';
+                font-size: 40px;
+                margin-bottom: 30px;
+
+            }
+
+            p {
+                line-height: .7cm;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: .7cm;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    h5 {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 30px;
+    }
+}
+
+// ********************************************************************
+// *******************  M E D I A  Q U E R I E S **********************
+// ********************************************************************
+
+@media only screen and (max-width:1320px) {}
+
+@media only screen and (max-width:992px) {
+
+    #hero {
+        height: 60vh;
+
+        .hero-inner {
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+                margin: 30px 0;
+            }
+
+            p:last-child {
+                bottom: 40%;
+            }
+        }
+    }
+
+    #arrivals {
+        .price-cards {
+            .prices {
+                .price-text {
+                    position: static;
+
+                    p:last-child {
+                        position: static;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #sellers {
+        .sellers-inner {
+            .sellers-cards {
+                .card-text {
+                    position: static;
+
+                    h3 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        position: static;
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+    }
+
+    #orders {
+        height: 40vh;
+        margin-top: 90px;
+    }
+
+    #umbro {
+        .umbro-inner {
+            .umbro-card {
+                .umbro-text {
+                    position: static;
+
+                    p:last-child {
+                        position: static;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    #suits {
+        .suits-inner {
+            .suit-card {
+                .suit-text {
+                    margin-top: 20px;
+                    position: static;
+
+                    h3 {
+                        position: static;
+                    }
+
+                    p {
+                        position: static;
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #subscription {
+        padding: 80px 70px;
+
+        .subs-text {
+            gap: 50px;
+        }
+    }
+
+    footer {
+        padding: 30px 40px;
+
+        .footer-inner {
+            gap: 5%;
+
+            .footer-card {
+                h3 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:900px) {}
+
+@media only screen and (max-width:765px) {
+
+    #hero {
+        height: 90vh;
+        padding: 0;
+        color: #fff;
+
+
+        .hero-inner {
+            background: rgba(0, 0, 0, 0.469);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            // h1 {
+            //     text-align: center;
+            // }
+
+            // p {
+            //     text-align: center;
+            // }
+
+            .btns {
+                // text-align: center;
+
+                button {
+                    margin: 20px 0;
+                }
+
+                button:last-child {
+                    margin: 0 auto;
+                }
+            }
+
+            p:last-child {
+                position: static;
+                font-size: 18px;
+            }
+        }
+    }
+
+    #arrivals{
+        padding: 0 30px;
+        .price-cards{
+            flex-direction: column;
+        }
+        .catalogue{
+            span{
+                display: none;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+
+    #sellers {
+        padding: 0 30px;
+
+        .sellers-inner {
+            flex-direction: column;
+        }
+    }
+
+    #orders {
+        display: none;
+    }
+
+    #umbro {
+        padding: 0 30px;
+        margin-top: 60px;
+
+        .umbro-inner {
+            flex-direction: column;
+            gap: 0;
+
+        }
+        button{
+            width: 100%;
+        }
+    }
+
+    #watches {
+        padding: 30px 10px;
+
+        .img {
+            display: none;
+        }
+
+        .text {
+            h2 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+
+    #suits {
+        margin-top: 70px;
+
+        .suits-inner {
+            flex-direction: column;
+            gap: 0;
+
+            .suit-card {
+                .img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .catalogue {
+            span {
+                display: none;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+
+
+    #jeans {
+        padding: 30px 10px;
+
+        .img {
+            display: none;
+        }
+
+        .text {
+            h2 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+
+    #subscription {
+        padding: 50px 30px;
+
+        .subs-text {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        form {
+            flex-direction: column;
+
+            input:first-child {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+        }
+    }
+
+    footer {
+        .footer-inner {
+            flex-direction: column;
+            padding: 30px 0;
+
+            .footer-card {
+                padding: 0;
+
+                h3 {
+                    margin: 30px 0;
+                }
+            }
+        }
+
+        h5 {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width:350px) {}
